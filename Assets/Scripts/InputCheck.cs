@@ -17,5 +17,7 @@ public class InputCheck : MonoBehaviour
     {
         input = two;
         Debug.Log("text entered");
+        
+            
     }
 }
