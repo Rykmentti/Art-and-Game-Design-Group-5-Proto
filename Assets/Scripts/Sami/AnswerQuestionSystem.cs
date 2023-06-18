@@ -63,6 +63,7 @@ public class AnswerQuestionSystem : MonoBehaviour
         if (answer == answerText)
         {
             Debug.Log("You answer correct!");
+            Destroy(gameObject);
 
             answerInputField.gameObject.SetActive(false);
             questionText.gameObject.SetActive(false);

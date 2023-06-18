@@ -404,6 +404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1180353649240648, guid: 1d484c29b2d965e41b534d732b5fc5e1, type: 3}
+      propertyPath: m_TagString
+      value: GroundPlatform
+      objectReference: {fileID: 0}
     - target: {fileID: 4610788923942896, guid: 1d484c29b2d965e41b534d732b5fc5e1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -464,6 +468,10 @@ PrefabInstance:
     - target: {fileID: 1817237519323102, guid: 5b6df171d3fa5d348954d77518b38677, type: 3}
       propertyPath: m_Name
       value: ground_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817237519323102, guid: 5b6df171d3fa5d348954d77518b38677, type: 3}
+      propertyPath: m_TagString
+      value: GroundPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 4982728936207310, guid: 5b6df171d3fa5d348954d77518b38677, type: 3}
       propertyPath: m_RootOrder
@@ -1643,6 +1651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1536895109933236, guid: 17f94d64102ff8a45b97e17146a18bc4, type: 3}
+      propertyPath: m_TagString
+      value: GroundPlatform
+      objectReference: {fileID: 0}
     - target: {fileID: 4703989831236782, guid: 17f94d64102ff8a45b97e17146a18bc4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1707,6 +1719,10 @@ PrefabInstance:
     - target: {fileID: 1817237519323102, guid: 5b6df171d3fa5d348954d77518b38677, type: 3}
       propertyPath: m_Name
       value: ground_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817237519323102, guid: 5b6df171d3fa5d348954d77518b38677, type: 3}
+      propertyPath: m_TagString
+      value: GroundPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 4982728936207310, guid: 5b6df171d3fa5d348954d77518b38677, type: 3}
       propertyPath: m_RootOrder
