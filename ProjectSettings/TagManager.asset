@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallJumpPlatform
   - GroundPlatform
+  - Question
   layers:
   - Default
   - TransparentFX
