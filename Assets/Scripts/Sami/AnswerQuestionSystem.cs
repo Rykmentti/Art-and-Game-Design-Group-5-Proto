@@ -13,12 +13,10 @@ public class AnswerQuestionSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questionText = GameObject.Find("QuestionText(TMP)").GetComponent<TMP_Text>();
-        answerInputField = GameObject.Find("AnswerInputField(TMP)").GetComponent<TMP_InputField>();
         answerInputField.gameObject.SetActive(false);
         questionText.gameObject.SetActive(false);
 
-        answerInputField.onEndEdit.AddListener((answer) => { CheckForAnswerForQuestion1(answer); });
+        answerInputField.onEndEdit.AddListener((answer) => { CheckForAnswerForQuestion(answer); });
     }
 
     // Update is called once per frame
@@ -38,24 +36,27 @@ public class AnswerQuestionSystem : MonoBehaviour
         questionText.gameObject.SetActive(true);
         answerInputField.gameObject.SetActive(true);
 
+        questionText = GameObject.Find("QuestionText(TMP)").GetComponent<TMP_Text>();
+        answerInputField = GameObject.Find("AnswerInputField(TMP)").GetComponent<TMP_InputField>();
+
         if (gameObject.name == "FirstQuestionTree")
         {
             questionText.text = "What is 1 + 1";
             answerText = "2";
         }
-        if (gameObject.name == "SecondQuestionTree")
+        else if (gameObject.name == "SecondQuestionTree")
         {
-            questionText.text = "Put Second Question here";
-            answerText = "Put Second question Answer here";
+            questionText.text = "What is 2 + 2";
+            answerText = "4";
         }
-        if (gameObject.name == "ThirdQuestionTree")
+        else if (gameObject.name == "ThirdQuestionTree")
         {
             questionText.text = "Put Third Question here";
             answerText = "Put Third Question Answer here";
         }
     }
 
-    void CheckForAnswerForQuestion1(string answer)
+    void CheckForAnswerForQuestion(string answer)
     {
         Debug.Log("Answer was: " + answer);
         Debug.Log("Correct answer is: " + answerText);
