@@ -51,8 +51,8 @@ public class AnswerQuestionSystem : MonoBehaviour
         }
         else if (gameObject.name == "ThirdQuestionTree")
         {
-            questionText.text = "Put Third Question here";
-            answerText = "Put Third Question Answer here";
+            questionText.text = "What is 17-6";
+            answerText = "11";
         }
     }
 
