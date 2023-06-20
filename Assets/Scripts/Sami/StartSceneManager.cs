@@ -1,23 +1,19 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class FadeTransitionTemplate : MonoBehaviour
+
+public class StartSceneManager : MonoBehaviour
 {
+    [SerializeField] Button startGameButton;
+    [SerializeField] Button optionsButton;
+    [SerializeField] Button exitGameButton;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(FadeIn());
-        StartCoroutine(FadeOutSequence());
-    }
-    IEnumerator FadeOutSequence()
-    {
-        yield return new WaitForSeconds(4);
-        StartCoroutine(FadeOut());
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Insert Scene Name Here"); ;
-        // If you use this FadeOut IEnumerator to end a scene, remember to add SceneManager method. SceneManager.LoadScene("SceneName") 
-        // Remember to add the scene name to build settings.
+        startGameButton.onClick.AddListener(() => { StartCoroutine(FadeOut("Stage1 Copy")); });
     }
     IEnumerator FadeIn()
     {
@@ -42,7 +38,7 @@ public class FadeTransitionTemplate : MonoBehaviour
         Destroy(fadeScreen);
     }
 
-    IEnumerator FadeOut()
+    IEnumerator FadeOut(string sceneName)
     {
         GameObject fadeScreen = new GameObject();
         fadeScreen.name = "Fade Screen";
@@ -61,5 +57,12 @@ public class FadeTransitionTemplate : MonoBehaviour
             Debug.Log("transparency is = " + i);
             yield return new WaitForSeconds(.01f);
         }
+        yield return new WaitForSeconds(1f);
+        ChangeSceneWithSceneName(sceneName); // Use parameter, which scene to change.
+    }
+
+    void ChangeSceneWithSceneName(string sceneName) // Change scene method with name (string) as a parameter.
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

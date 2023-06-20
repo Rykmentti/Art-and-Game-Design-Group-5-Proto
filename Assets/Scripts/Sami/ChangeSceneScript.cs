@@ -21,6 +21,6 @@ public class ChangeSceneScript : MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadScene("Stage1 Copy");
+        SceneManager.LoadScene("StartScene");
     }
 }
